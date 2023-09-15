@@ -9,6 +9,7 @@
 ctrl + d 한줄 복사
 ctrl + w 한단어 한줄 드래그
 ctrl + alt L 정리 
+ctrl + r 검색해서 전체 수정 replace all
 ctrl / 한 줄 주석, ctrl + shift /
 shif f6 클래스 명 바꾸기
 F9 다음 BP까지 실행
@@ -147,5 +148,6 @@ ex) Interger num = 1;  num은 객체이므로 값에 Null을 넣을수잇다
    2. 객체.get(Key) K값 가져오기
    3. 객체.remove(Key) K에 저장
 
-예외처리 어려운데 잘해야한다 그래야 개발을 잘하는것임
 
+플래그 세우기 적절하게 킬링 포인트로 사용해야한다 많이쓰면 힘들어진다
+예외처리 어려운데 잘해야한다 그래야 개발을 잘하는것임
