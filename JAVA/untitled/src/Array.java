@@ -33,7 +33,8 @@ public class Array {
         for (int i = 0; i < n; i++) {
             sum += key[i];
         }
+
         // 4. 평균 출력
-        System.out.println("평균 : "+ sum/n);
+        System.out.println("평균 : " + sum / n);
     }
 }

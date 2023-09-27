@@ -21,7 +21,7 @@ public class Tutorial2 {
         System.out.println("키 : " + height + "cm");
 
         // 자기소개
-        scanner.nextLine(); // 입력 간 충돌을 위해, 엔터값을 먹여주는 입력값 작성
+        scanner.nextLine(); // 입력 간 충돌을 위해, 엔터값을 먹여주는 입력값 작성 (버퍼)
         String introdu = scanner.nextLine();
         System.out.println("자기소개 : " + introdu);
 
