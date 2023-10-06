@@ -1,4 +1,6 @@
 Git 수업
+확인하기
+git branch -m master main  (master) 일때 바꿔줘야함 (main)으로
 
 새로 폴더 생성후 들어가서 우클릭 gitbash
 1. 로컬저장소(컴퓨터) - 원격저장소(인터넷) 연결
@@ -17,3 +19,10 @@ Git 수업
 4. pull = 당기다 : 로컬 <- 원격 당겨받기
 		단독으로 당겨받으면 됌
 명령어 : git pull 원격지주소
+
+5. 브랜치(branch) 나뭇가지
+- main : 버전의 중심 / 실제 배포
+- main 이외의 버전 : 테스트용 버전
+		-> 사용자 편의 대로 이름 설정
+명령어 : git branch 브랜치명
+	git checkout 위의 브랜치명
