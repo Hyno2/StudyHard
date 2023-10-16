@@ -5,6 +5,7 @@
 -- DBMS : DB를 관리하는 시스템 => Oracle, MySql MongoDB...
 -- NOT NULL : "NULL이 되면 안되는" 속성에 작성
 -- PRIMARY KEY : 기본키, 데이터들끼리 구분하기 위한 속성에 부여
+-- || : 문자열 이어붙이기(java에서 +로 문자열 이어붙인 거랑 똑같음)
 
 -- Oracle 자료형
 -- 문자형
@@ -52,6 +53,7 @@ SELECT 칼럼명 FROM 테이블명;
 --	ALTER TABLE 테이블명 MODIFY 컬럼명 데이터타입;
 
 -- 4. RENAME 테이블명 변경
+--	ALTER TABLE 테이블명 RENAME TO 바꿀테이블명
 --    RENAME COLUMN 컬렴명 변경하기
 --	ALTER TABLE 테이블명 RENAME COLUMN 원래컬럼명 TO 바꿀컬럼명;
 
@@ -84,3 +86,72 @@ SELECT 칼럼명 FROM 테이블명;
 --  ROLLBACK TO 세이브포인트명
 -- SAVEPOINT : 커밋까지는 아니고, 요 지점은 저장 하고 싶을 때
 --  SAVEPOINT[저장할_세이브포인트명];
+
+시퀀스
+
+create sequence 시퀀스명;
+시퀀스명.nextval 로쓰면 순차적으로 숫자증가된다 
+시퀀스명.currval 현재 숫자
+--시퀀스 값 바꾸는 법
+--1. 지운다.
+drop sequence mymusic;
+--2. 새로 만들되, 내가 시작하고 싶은 번호부터 시작하도록 한다.
+create sequence mymusic start with 7 increment by 1;
+
+PK 기본키
+데이터가 중복되지않는 것을 삼는다
+
+FK 외래키
+ALTER TABLE KBStudent ADD CONSTRAINT FK_CODE FOREIGN KEY(KSCODE)
+REFERENCES KBMajor(MCODE);
+
+-- JOIN
+-- 두 개 이상의 테이블을 공통된 열(COLUMN)으로 묶는다
+SELECT KSNUM,KBSTUDENT.KSNAME,KBMAJOR.MMJNAME 
+FROM KBSTUDENT JOIN KBMAJOR
+ON kbstudent.kscode =kbmajor.mcode;
+
+LEFT JOIN
+
+RIGHT JOIN
+
+FULL JOIN
+
+SELF JOIN
+
+SELECT KSNUM 학번,KBSTUDENT.KSNAME 학생이름,KBMAJOR.MMJNAME 학과명
+FROM KBSTUDENT JOIN KBMAJOR
+ON kbstudent.kscode =kbmajor.mcode;
+
+-- WHERE을 사용한 JOIN문, 두 테이블을 콤마,로 묶고, WHERE문을 사용함
+SELECT KSNUM 학번,KBSTUDENT.KSNAME 학생이름,KBMAJOR.MMJNAME 학과명
+FROM KBSTUDENT, KBMAJOR
+WHERE kbstudent.kscode =kbmajor.mcode;
+
+-- 뷰(VIEW)
+-- 뷰의 기본용도가 데이터를 보기 위함이다
+-- 가상테이블
+-- 기본적인 삭제 수정 삽입은 안되고(= 복잡한구조에는 불가능하고 단순한 구조에는 가능)
+-- 대신 원본이 바뀔시 VIEW 값도 바뀐다
+-- VIEW = SELECT 결과물
+-- SELECT문이 너무 복잡해지거나 혹은 자주 쓰이는 SELECT문을 더 편하게 불러오고자 쓰는 것
+
+CREATE VIEW MYSTUDENT AS
+SELECT KBSTUDENT.KSNAME NAME, KBMAJOR.MMJNAME MAJ_NAME FROM KBSTUDENT
+JOIN KBMAJOR ON KBSTUDENT.KSCODE = KBMAJOR.MCODE;
+
+SELECT * FROM MYSTUDENT; -- MYSTUDENT는 실제 값이 아니다
+    -- KBSTUDENT, KBMAJOR로 만들어진 가상의 표(SELECT 결과물)
+    -- DELETE, UPDATE,INSERT가 단순한 구조의 VIEW에서는 되는데 복잡한 구조의 VIEW에선 안 됨
+DELETE FROM MYSTUDENT WHERE MAJ_NAME = '경영';
+SELECT * FROM KBSTUDENT;
+
+INSERT INTO KBSTUDENT VALUES(2,'유지웅','002');
+
+-- VIEW를 통해서 SELECT문을 단순화하고 보다 복잡한 형태의 JOIN등도 구현이 가능함
+
+-- 순서대로 출력하는 것
+--...순으로 출력하는 것 : ORDER BY
+SELECT * FROM KBSTUDENT;
+SELECT * FROM KBSTUDENT ORDER BY KSNUM; -- 오름차순
+SELECT * FROM KBSTUDENT ORDER BY KSNUM DESC; -- 내림차순
