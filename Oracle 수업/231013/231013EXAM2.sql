@@ -1,0 +1,44 @@
+-- 학생명단 테이블 생성 : 학번문자열,이름문자열,학년숫자,전공문자열
+CREATE TABLE STUDENT_LIST(
+    HAK_BUN VARCHAR2(20),
+    STNAME VARCHAR2(20) NOT NULL,
+    HAK_NUN INT,
+    STMAJOR VARCHAR2(20)
+);
+
+-- 교수명단 테이블 생성 : 번호문자열 이름문자열 NULL지정안댐
+--                      전화번호 문자열 NULL지정안됌
+CREATE TABLE PROFESSOR_LIST(
+    NUM VARCHAR2(20) PRIMARY KEY,
+    PRONAME VARCHAR2(20) NOT NULL,
+    PROTEL VARCHAR2(20) NOT NULL,
+    PROMAJOR VARCHAR2(20) NOT NULL,
+    PROAGE INT
+);
+
+-- 학생명단 테이블 데이터 추가
+INSERT INTO STUDENT_LIST VALUES('123','김길동',1,'컴퓨터공학');
+INSERT INTO STUDENT_LIST VALUES('124','권길동',2,'통계');
+INSERT INTO STUDENT_LIST VALUES('125','박길동',4,'국어국문');
+INSERT INTO STUDENT_LIST VALUES('126','정길동',4,'무역');
+INSERT INTO STUDENT_LIST VALUES('127','이길동',3,'국어국문');
+
+-- 교수명단 테이블 데이터 추가
+INSERT INTO PROFESSOR_LIST VALUES('1','김철수','010-0000-0000','국어국문',25);
+INSERT INTO PROFESSOR_LIST VALUES('2','이영희','010-1111-1111','통계',45);
+INSERT INTO PROFESSOR_LIST VALUES('3','박훈','010-2222-2222','컴퓨터공학',35);
+
+-- 학생명단 , 교수명단 모든 데이터 출력
+SELECT * FROM STUDENT_LIST;
+
+SELECT * FROM PROFESSOR_LIST;
+
+-- 학생명단에서 3학년 이상인 데이터만 검색하여 학번,이름,학년 칼럼만 출력하기
+SELECT HAK_BUN,STNAME,HAK_NUN FROM STUDENT_LIST WHERE HAK_NUN >= 3;
+-- 교수명단에서 번호가 1인 데이터만 검색해서 이름,전화번호,소속전공 칼럼만 출력하기
+SELECT PRONAME,PROTEL,PROMAJOR FROM PROFESSOR_LIST WHERE NUM = 1;
+-- 교수명단에서 나이가 35세이상인 데이터만 검색해서 이름,나이 칼럼만 출력하기
+SELECT PRONAME,PROAGE FROM PROFESSOR_LIST WHERE PROAGE >= 35;
+-- 학생명단과 교수명단 테이블 삭제하기
+DROP TABLE STUDENT_LIST;
+DROP TABLE PROFESSOR_LIST;
