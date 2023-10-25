@@ -1,0 +1,92 @@
+C#	
+Ctrl-F : 찾기 대화 상자
+Ctrl-H : 바꾸기 대화 상자
+Ctrl-G : 해당 줄로 가기
+Ctrl-F5 : 프로그램 시작
+Ctrl-A : 전체 코드 블럭잡기 -> Ctrl-K,F : 선택한 영역 자동 코드 정렬  (이거 다시 찾다가 포스팅하는 중...)
+F12 : 커서위치 내용의 정의로 이동( 즉, 대략 CPP파일 구현부로 이동)
+Ctrl-K, C : 선택한 블록을 모두 주석 처리
+Ctrl-K, U : 선택한 블록을 모두 주석 처리 해제 
+.Net FrameWork : 라이브러리 + 닷넷플랫폼
+프레임워크 : 구동되는 환경
+	    틀을 만들어준다
+	     구상은 다되어있지만 세부기능을 내가 작성하는것
+
+라이브러리 : 내가 전체를 구상해서 기능을 가져다쓰는거
+using = import
+namespace = 프로그램이름, 이름공간
+
+보기 - 도구상자 
+mbox 탭 = MessageBox.Show()
+두 값의 합 " 20이아니고
+두 값의 합(5+15) : 20 이렇게 뜨위가 빼기 곱하기 나누기 나머지 
+mbox("두 값의합("+num1+"+"+num2+"):"+(num1+num2);
+Mbox($"두값의 합({num1}+{num2}):{num1+num2}");
+mbox(string.Format("두 값의 합({0}+{1}):{2}",num1,num2,num1+num2));
+
+int.Parse: 공백을 비롯해 숫자를 입력하지 않으면 튕김	
+	이른 보완한것이 int.TryParse
+ int.TryParse
+엉뚱한 값을 넣어도 오류나지않고 0을 집어넣어줌
+// 상수
+const double PI = 3.14
+int.TryParse(Console.ReadLine(),out input);
+int.TryParse(Console.ReadLine(),out int r);
+
+
+솔루션 안에 프로젝트
+.net WinForm : 프레임워크
+.net Console
+
+출력
+cw 탭
+Console.WriteLine();
+
+charAt(n)은
+Console.WriteLine("문자"[n]); 으로쓴다
+
+입력
+Console.ReadLine();
+위의 명령문은 문자열만 입력 가능하다
+
+형변환 
+강제변환(int)값
+문자열을 숫자로 변환하는 메소드
+int.Parse()
+long.Parse()
+float.Parse()
+double.Parse()
+bool.Parse()
+
+int number = 200;
+string out = number + "";
+Console.WriteLine(out);
+
+조건문
+
+// 삼항 연산자
+// 물음표와 콜론을 통하여 조건문을 한 줄로 표현하는 것
+int num = int.Parse(Console.ReadLine());
+String result = num % 2 == 0 ? "짝" : "짝이아님";
+// 수식 / 그 수식이 참인경우 " 그 수식이 거짓인 경우
+
+// switch 문
+ // case 밑에 단 한줄의 코드가 있다면 그 밑에는 꼭 break가 필요
+                            // Java, C 에선 밑에 break 없어도 돌아는감
+반복문
+switch break필수
+
+foreach (자료형 변수 in 컬렉션) 인덱스말고 값만 불러올때 사용된다
+{
+}
+ // foreach 문
+ int[] numbers = { 10, 20, 30, 40, 50 };
+ // i = numbers 안에 있는 값들을 각각 의미함
+ // java의 for(int item : numbers)
+ foreach(var i in numbers)
+ {
+     Console.WriteLine(i);
+ }
+
+배열
+타입[] 배열명 = {값};
