@@ -13,6 +13,10 @@ Ctrl-K, U : 선택한 블록을 모두 주석 처리 해제
 	     구상은 다되어있지만 세부기능을 내가 작성하는것
 
 라이브러리 : 내가 전체를 구상해서 기능을 가져다쓰는거
+heap : 프로그램이 구동중일 때 할당하고 사용하는 메모리
+stack : 프로그램 시작 전에 미리 메모리 할당하는 부분
+
+
 using = import
 namespace = 프로그램이름, 이름공간
 
@@ -90,3 +94,62 @@ foreach (자료형 변수 in 컬렉션) 인덱스말고 값만 불러올때 사�
 
 배열
 타입[] 배열명 = {값};
+
+상속
+C#에서는 :을 사용해서 상속시킨다
+
+
+클래스
+사용자 정의 자료형
+인스턴스(객체) : 클래스 자료형을 변수로 선언한 것
+	        인스턴스는 값을 가지고 있는것이 아니라 
+	        값을 가르키고 있는거 pointer
+class명 인스턴스명 = new 생성자();
+
+static이 안붙은 것은 인스턴스 변수
+인스턴스가 선언되고 나서야 메모리에 올라가기 때문
+Product p = new Product(); <- 이코드가 필수
+p.name = "감자";
+인스턴스 별로 각자 값이 다를수 있다
+
+static이 붙은 것들은 클래스 변수
+인스턴스 선언되기 전 즉 프로그램을 시작하자마자 메모리에 올라감
+Product.CompanyName ="경북농산";
+Product 타입 객체들이 모두 공유한다. 공통적으로 접근 할수있다.
+public static string companyName;
+
+//인스턴스에 값을 넣는 방법
+  첫번째 방법 = 직접 대입
+InitializeComponent();
+Product.companyName = "경북산업마트";
+Product p1 = new Product();
+p1.name = "마이크";
+p1.price = 90000;
+
+// 두번째 방법 = 선언과 동시에 값을 대입(생성자랑 관계없음)
+ Product p4 = new Product() { name = "바디워시", price = 50000 };
+
+  // 세번째 방법 = 생성자를 활용하는 방법(자바랑 동일함
+  Student s1 = new Student(1, "이현오");
+
+
+추상화 : 프로그램에 사용되는 핵심적인 부분을 추출하는 것
+
+partal 클래스 : 한클래스에 여러부분으로 나눠서 정의하는것
+
+랜덤객체만들기
+Random r = new Random();
+객체 = r.Next(100).ToString();
+
+List 
+C#에서 List는 Java의 ArrayList랑 사실상 똑같다
+List<string> namelist = new List<string>();
+List<int> agelist = new List<int>();
+List<int> age2list = new List<int>();
+
+// 참고 C#에 있는 ArrayList는
+// 자바의 ArrayList<Object>랑 동일하다
+// 즉 아무거나 다 들어가는 리스트이다
+ArrayList tmiList = new ArrayList();
+
+enum : 가독성 올릴떄 사욜한다

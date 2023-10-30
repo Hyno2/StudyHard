@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "231027HelloC#2", "231027HelloC#2\231027HelloC#2.csproj", "{385449AB-9EF6-464D-A1C6-EF3A8BF58890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "231030HelloC#2_winform", "231030HelloC#2_winform\231030HelloC#2_winform.csproj", "{3FC8F762-02FC-40BB-96D6-E4BAE55DF775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "231030HelloC#2_winform2", "231030HelloC#2_winform2\231030HelloC#2_winform2.csproj", "{544F8262-F7FF-46A0-80E5-07155BE526EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{385449AB-9EF6-464D-A1C6-EF3A8BF58890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{385449AB-9EF6-464D-A1C6-EF3A8BF58890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{385449AB-9EF6-464D-A1C6-EF3A8BF58890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC8F762-02FC-40BB-96D6-E4BAE55DF775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC8F762-02FC-40BB-96D6-E4BAE55DF775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC8F762-02FC-40BB-96D6-E4BAE55DF775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC8F762-02FC-40BB-96D6-E4BAE55DF775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544F8262-F7FF-46A0-80E5-07155BE526EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544F8262-F7FF-46A0-80E5-07155BE526EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544F8262-F7FF-46A0-80E5-07155BE526EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544F8262-F7FF-46A0-80E5-07155BE526EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
