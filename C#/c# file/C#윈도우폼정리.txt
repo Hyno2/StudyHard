@@ -1,0 +1,45 @@
+C# winform 
+좌측 상단이 Location 0,0
+
+mbox 탭  = Message.Show("");
+
+
+Cursor
+Dock
+Font, Forecolor
+FontBorderStyle : 폼의 테두리 및 제목 표시줄의 모양 동작
+Background
+UseSystemPassword
+AutoCompleteMode
+
+
+
+
+
+textbox
+
+pictureBox
+
+panel
+
+label
+
+button
+FlatStyle
+FlatApperance
+
+명령어
+this.dispose 종료
+
+코드로 버튼 만들기
+ Button b = new Button();
+ b.Text = "코드로 만든 버튼";
+ b.AutoSize = true;
+ b.Location = new System.Drawing.Point(10, 10);
+// Controls : Form1안에 있는 모든 구성요소들(Button들 등등)
+ Controls.Add(b);
+
+// 버튼눌러서 원래 폼 숨기고 새로운폼 나오게함
+Hide();
+new Form2().ShowDialog();
+Show();
