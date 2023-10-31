@@ -12,13 +12,14 @@ namespace _231030C__EXAM3
 {
     public partial class Form4 : Form
     {
+        // List 사용
         List<string>texts = new List<string>();
         public Form4()
         {
             InitializeComponent();
             //초기화
             label1.Text = "";
-            
+            // 리스트객체 texts에 값넣어주기
             texts.Add("안녕하세요");
             texts.Add("안녕히가세요");
             texts.Add("반값습니다");
@@ -27,10 +28,7 @@ namespace _231030C__EXAM3
 
         }
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {

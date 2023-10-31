@@ -21,9 +21,10 @@ namespace _231030C__EXAM3
             
             
         }
-
+        // 유저가 가위일때
         private void button1_Click(object sender, EventArgs e)
         {
+            // 정답 컴퓨터는 랜덤값으로 정한다
             int com = new Random().Next(3); // 0, 1 , 2로 나온다
             // 0 = 가위
             // 1 = 바위

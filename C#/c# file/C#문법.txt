@@ -15,7 +15,31 @@ Ctrl-K, U : 선택한 블록을 모두 주석 처리 해제
 라이브러리 : 내가 전체를 구상해서 기능을 가져다쓰는거
 heap : 프로그램이 구동중일 때 할당하고 사용하는 메모리
 stack : 프로그램 시작 전에 미리 메모리 할당하는 부분
+static 정적 이 우선이다 static이 붙어있으면 클래스 메서드이거나 클래스 변수
+	아니라면 인스턴스 메서드 인스턴스 변수
+	main이나 static에서 인스턴스 메서드나 변수를 사용하고싶다면
+	클래스를 객체화 시켜서 부른다 
+C#에서는 접근 제어자를 쓰지않을때 private으로 적용된다
+정적 생성자 
+인스턴스 호출하는 시점에 딱 한 번만 호출한다 
+static 클래스명(){}
 
+캡슐화 : 메소드 호출의 순서가 중요할때 
+여러개의 클래스의 메소드를 하나의 클래스로 묶는다 통합시킨다
+
+객체를 값만 복사하려고 할때에는 Structure을 사용하면된다
+참조복사 : 위치를 복사하는거라 원본이 따라바뀐다
+값복사 : 위치를 가르키기만해서 원본은 불변이다
+
+// ref 키워드 = 참조자
+   // 해당 변수의 값뿐 만아니라 그 변수의 위치도 같이 가져오는 것
+   // 따라서 swap에서 값이 바뀌면 swap밖에있는 원본의 값이 변경된다
+
+재귀 함수 자기자신을 호출하는것  
+합,곱,피보나치에서 사용
+
+Hashmap 쓰는것
+ Dictionary<string,string> student = new Dictionary<string, string>();
 
 using = import
 namespace = 프로그램이름, 이름공간
@@ -132,6 +156,9 @@ p1.price = 90000;
   // 세번째 방법 = 생성자를 활용하는 방법(자바랑 동일함
   Student s1 = new Student(1, "이현오");
 
+getter setter
+접근제어자 타입 메소드명{ get; set;}
+public int 메소드명 {get; set;}
 
 추상화 : 프로그램에 사용되는 핵심적인 부분을 추출하는 것
 
@@ -139,9 +166,10 @@ partal 클래스 : 한클래스에 여러부분으로 나눠서 정의하는것
 
 랜덤객체만들기
 Random r = new Random();
-객체 = r.Next(100).ToString();
+객채.text또는 숫자 = r.Next(100).ToString();
 
 List 
+리스트는 기본적으로 참조 복사를 지원한다
 C#에서 List는 Java의 ArrayList랑 사실상 똑같다
 List<string> namelist = new List<string>();
 List<int> agelist = new List<int>();

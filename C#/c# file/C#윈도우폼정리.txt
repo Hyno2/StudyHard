@@ -12,10 +12,6 @@ Background
 UseSystemPassword
 AutoCompleteMode
 
-
-
-
-
 textbox
 
 pictureBox
