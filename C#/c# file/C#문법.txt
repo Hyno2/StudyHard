@@ -181,3 +181,94 @@ List<int> age2list = new List<int>();
 ArrayList tmiList = new ArrayList();
 
 enum : 가독성 올릴떄 사욜한다
+
+다형성 : 코드 중복을 제거하기 위해 사용한다
+ //	 왼쪽 = 오른쪽의 관계가
+ //          오른쪽 is 왼쪽
+ // ex       핸드폰 p = new 스마트폰
+ // ex       스마트폰 is 핸드폰 O
+ //          핸드폰 is 스마트폰 X
+ Animal a = new Dog(); // Dog is Animal
+ Animal b = new Cat(); // Cat is Animal
+
+ a.age = 1;
+ a.eat();
+ a.sleep();
+ // a는 Dog인스턴스이므로 Dog로형변환이 가능하다
+ // bark 는 Dog에만 있기에 형변환 해야함
+ ((Dog)a).bark();
+ // b는 Cat인스턴스이므로 Cat로 형변환가능
+ // meow 는 Cat에만 있기에 형변환 해야함
+ ((Cat)b).meow(); 
+
+ // 형변환 2번째 방법
+ if(b is Dog)
+ {
+     // 여기서도 세가지 방법이있다
+     //1
+     ((Dog)b).bark();
+     //2
+     (b as Dog).bark();
+     //3
+     var test = b as Dog;
+     if(test != null)
+     { test.bark(); }
+ }
+
+생성자
+상위클래스에 상속되있는하위클래스를 인스턴스로 생성할때 생성자가 호출되는데
+그럴때 상위클래스 생성자 먼저 호출된후 하위클래스 생성자가 호출된다
+
+상위클래스 생성자가 여러개일때 골라서 호출하고싶을땐
+하위클래스 생성자뒤에 : 상위클래스 생성자(파라메터)에따라 호출할수있다
+
+오버라이드
+오버라이드를 하고싶은 메소드는 virtual을 써줘야한다
+alt + enter override 해줌
+
+추상클래스
+상위클래스가 추상메소드가 있다면 하위클래스에선 의무적으로 오버라이드해야한다
+abstract = 추상화라는건 구현되있지않음 구현을 하위클래스에게 넘긴다
+// 추상클래스의 특징
+// 불완전하므로 단독으로 인스턴스 만들수없다
+
+
+버튼을 동그라미 모양으로 바꾸기
+public class CircleButton : Button
+{
+    protected override void OnPaint(PaintEventArgs pevent) // OnPaint는 Button안에있다
+    {
+        GraphicsPath g = new GraphicsPath();
+        g.AddEllipse(0, 0, ClientSize.Width, ClientSize.Height);
+        this.Region = new System.Drawing.Region(g);
+
+        base.OnPaint(pevent);
+    }
+}
+
+모달 : 모달을 만나면 코드 중지, 
+         뒤에있는 창을 제어 불가능하게한다
+모달리스 : 창이 각각 뜨고 코드 진행되고 
+             뒤에있는 창을 제어 가능
+
+private void button5_Click(object sender, EventArgs e)
+{
+    MyForm m = new MyForm();
+    m.ShowDialog(); //모달(Modal)
+    MessageBox.Show("Test");
+}
+
+private void circleButton1_Click(object sender, EventArgs e)
+{
+    MyForm m = new MyForm();
+    m.Show(); //모달리스(Modaless)
+    MessageBox.Show("Test");
+}
+
+화면안에 창 뜨게하기
+IsMdiContainer = true; // 자기 자신을 mdi 컨테이너로 만듦
+버튼클릭안에 
+MyForm m = new MyForm();
+ m.MdiParent = this;
+ m.Show();
+
