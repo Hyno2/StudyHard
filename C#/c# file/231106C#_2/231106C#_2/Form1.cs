@@ -15,6 +15,7 @@ namespace _231106C__2
         public Form1()
         {
             InitializeComponent();
+            // 차트쓰기
             chart1.Series[0].Name = "C#실력";
             chart1.Series[0].Points.AddXY(1,2);
             chart1.Series[0].Points.AddXY(2,1);

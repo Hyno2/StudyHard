@@ -9,6 +9,7 @@ Ctrl-K, C : 선택한 블록을 모두 주석 처리
 Ctrl-K, U : 선택한 블록을 모두 주석 처리 해제 
 .Net FrameWork : 라이브러리 + 닷넷플랫폼
 Environment.NewLine 은 = "\n"이랑 같다
+dll = Dynamin Link Library exe dll 같이있어야함 
 
 윈도우에 이벤트뷰어로 C#같은경우는 오류를 찾아낼수 있다
 

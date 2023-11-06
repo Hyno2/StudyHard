@@ -15,6 +15,24 @@ namespace _231106C__2
         public Form2()
         {
             InitializeComponent();
+            chart1.Series[0].Points.AddXY(0, 0, 10);
+            chart1.Series[0].Points.AddXY(new double[] {2,0});
+            chart1.Series[0].Name = "level";
+            chart1.Series.Add("Data");
+            chart1.Series[0].Points.Add(new double[] {5,0});
+            chart1.Series[0].Points.Add(new double[] {20,0});
+            chart1.Series[0].Points.Add(new double[] {50,0});
+
+            chart2.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            for(int i = 0; i<10 ; i++)
+            {
+                chart2.Series["series1"].Points.AddXY(i, i + 10);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Form2().ShowDialog();
         }
     }
 }
