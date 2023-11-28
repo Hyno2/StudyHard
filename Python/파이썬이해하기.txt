@@ -1,0 +1,198 @@
+파이썬
+ctrl+shift+f10 현재창 실행
+; 세미콜론 안써도댐
+# 실행 = shift + F10 혹은 	위의 화살표 클릭
+"""
+이건 여러 줄 주석도 되고
+여러 줄 짜리 문자열도 됨
+"""
+
+'''
+작은 따옴표로도 여러 줄 주석 가능
+여러 줄 주석이자 문자열
+'''
+** 두번쓰면 제곱
+// 몫
+% 나머지
+문자열도 곱셈이가능
+
+출력문
+print() 
+문자는 ' ' 이나 " " 둘중 아무거나 써도댐
+
+print (('상호명: %s, 전화번호: %s, 대표메뉴: %s') % (item[1],item[3],item[4])) 
+# 중간에 %은 문자포메팅
+# 문자포메팅% = 문자열의 특정위치에 특정한값(변수)를 삽입하여 출력하는경우
+# format()도있다
+# print('식당명: {},주메뉴: {}, 전화번호: {}'.format(item.find('./col[@name="상호명"]').text,
+                                             item.find('./col[@name="주메뉴"]').text,
+                                             item.find('./col[@name="전화번호"]').text))
+
+입력문
+
+a= int(input('숫자입력'))
+숫자입력 100
+
+# 조건문
+# 조건 뒤에 : 콜론 찍어줘야함
+if a == 10 :     
+    print()
+elif a == 0 :  # elseif와같다
+   print()
+else :    
+    print()
+
+# 반복문
+#조건뒤에 : 콜론 붙임
+# range(n,m) : n부터 m-1까지 리스트 생성
+for item in range(1, 101) : # item에 1~100까지 범위
+     print(item)
+# while문에서 파이썬에선 count ++ 안댐 그래서 count += 1 
+# contine는 밑 코드를 스킵하고 다음 반복을 진행
+# break는 반복문 탈출(종료)
+
+리스트
+여러개의 데이터를 한번에 관리하는 자료형
+여러타입의 값들이 하나의 리스트에 있다
+
+list = [1,2,3,4]
+list[-1] 뒤에서 첫번째
+list[2:] 뒤에서 두번째부터 끝까지
+list [-2:]  뒤에서 두번째부터 끝까지
+list[1:-2] 두번째부터 뒤에서 두번째까지
+
+값추가 더하기 append insert
+# 마지막 인덱스에 값추가 
+list1 = list1+[10] 
+list1.append(1000)
+print(list1[5]) #1000
+print(list1)
+
+# 지정한 인덱스에 값추가
+list1.insert(인덱스,값)
+
+삭제및 리스트길이 pop
+# list1의 끝 값을 변수에 대입 후 빼내서 리스트에서 제거한다
+a = list1.pop() # 인덱스값 안썻을시 맨뒤
+print(a) # 5
+print(list1) # [1,2,3,4]
+b = list1.pop(0) # 100
+print(b) # 1 
+print(list1) # [2,3,4]
+
+튜플
+리스트와 동일하나 소괄호로 구분하고 순서와 내용 수정불가
+tuple = (1,2,3,4)
+튜플 추가 
+tuple1 = tuple1 + (100,) # 콤마를 이용해 더하기 연산으로 튜플에 값 추가는 가능
+print(tuple1) # (1,2,3,4,5,100)
+
+딕셔너리
+딕셔너리명 = { 
+key : value
+키는 숫자,문자열만가능, 값은 형태에 제한없다
+}
+
+딕셔너리 추가와 삭제
+#추가
+딕셔너리명[key] = value 
+#삭제
+del 딕셔너리명[key] 키로접근하여 키 밸류 삭제함
+딕셔너리명.clear() 모든 키 밸류 삭제
+
+함수 def
+def 함수명(매개변수):   매개변수에서 타입정의 안함
+
+내장함수(파이썬에서 미리 정의한 함수)
+enumerate
+
+find  특정 문자열 시작 인덱스 찾기위해 사용 없을시 -1반환
+
+filter 함수를 매개변수로 던져주기
+
+lambda 
+lambda map
+
+클래스 
+사용자 정의 자료형
+생성자는 무조건 __init__이라는 이름을 갖는다
+모든 함수의 매개변수에 self가 반드시 들어간다
+메소드 만들때도 self가 매개변수에 무조건들어가야함
+
+try catch finally
+
+pass 키워드
+해당 부분에서 아무것도 구현하지 않는 것
+
+넘파이
+팬더스
+맷플롯립
+
+API
+1. csv파일 읽어오기 
+웹에서 csv파일 다운받아서 pythonProject파일에 넣고
+
+import csv # csv 파일 읽는 라이브러리 호출
+
+#f = 파일을 처리하는 변수
+# open 함수를 통해 읽어 들인 파일에 대한 내용을 f에 저장
+f = open('csv파일명','r')
+
+# 파일 데이터를 읽음
+rdr = csv.reader(f) 
+# 리스트 선언
+mydatas = [] 
+
+# rdr에 있는 걸 한 줄씩 추가
+for line in rdr :
+    mydatas.append(line)
+f.close()
+
+for item in mydatas:
+    print(item)
+
+2. json Request URL통해 읽어오기 
+웹에서 인증키Encoding Decoding 설정 후
+OpenAPI호출후 Request URL 을 복사한후에 
+
+import json # json 라이브러리 추가
+import urllib.request # url라이브러리요청
+
+# myurl에 API request URL을 넣는다
+myurl ='리퀘스트URL'
+
+# response변수에 요쳥한 URL열고 변수에 대입
+response = urllib.request.urlopen(myurl)
+
+# 읽을때 UTF8로 디코딩하는이유 한글이 깨질 수있음
+response = response.read().decode('utf8')
+
+print(response)
+
+# response 데이터를 json 형태로 바꿈
+data = json.loads(response)
+# key가 'data'인 것만 가져옴
+json_arr = data['data']
+
+# csv랑 다르게 열이름(column이름)을 직접 입력가능 하다
+for item in json_arr:
+    print(f"식당명:{item['상호명']}, 대표메뉴:{item['주메뉴']}
+
+3. XML 
+json과같은데 returnType에 XML을 쓰고 OpenAPI 호출한다
+
+# requests 라이브러리 설치하려면 alt shift enter해서 설치해도되고
+# 밑에 터미널에서 pip install requests쳐서 해도 된다
+import xml.etree.cElementTree as elemTree
+import requests
+
+myurl = '리퀘스트URL'
+
+response = requests.get(myurl)
+xmldatas = elemTree.fromstring(response.text)
+myresult = xmldatas.find('data').findall('item')
+
+for item in myresult:
+    print('식당명: {},주메뉴: {}, 전화번호: {}'.format(item.find('./col[@name="상호명"]').text,
+                                             item.find('./col[@name="주메뉴"]').text,
+                                             item.find('./col[@name="전화번호"]').text))
