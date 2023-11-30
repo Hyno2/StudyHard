@@ -44,10 +44,13 @@ def hellonaver():
     }
     print(request.get_json())
     user_key = request.get_json()['user']
+    mymsg = request.get_json()
+    mymsg = mymsg['textContent']['text']
     data = {
         'event':'send',
         'user':user_key,
-        'textContent':{'text':'Hello'}
+        #'textContent':{'text':'Hello'}
+        'textContent' : {'text':mymsg}
     }
     message = json.dumps(data)
     response = requests.post(
