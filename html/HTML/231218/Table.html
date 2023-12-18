@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 표를 만들 때, <table> 태그 사용-->
+    <table border="1"> <!-- border 테이블 디자인 설정-->
+        <caption>인적사항</caption> <!--캡션 : 표를 설명하는 것-->
+
+        <!-- colgroup 태그 : 열을 그룹화해 스타일 적용할 때 사용-->
+        <colgroup>  <!--col(열)에서주는 스타일보다 tr(행)에서 주는 스타일이 더 우선시된다-->
+            <col style="background-color: blueviolet;">
+            <col span="2" style="background-color: brown;">
+        </colgroup>
+        
+        <!--<tr>,<th>,<td>을 사용해 행과 열을 구성-->
+        <!--<tr> : 행을 하나씩 추가할때 사용-->
+        <!--<th>, <td> : 각각 테이블 헤더, 테이블의 실질적데이터를 의미-->
+        <tr style="background-color: aqua;"> 
+            <th>이름</th>
+            <th>성별</th>
+            <th>생일</th>
+        </tr>
+        <tr>
+            <td>이현오</td>
+            <td>남성</td>
+            <td>09.11</td>
+        </tr>
+        
+        <!-- <thead>, <tbody>, <tfoot> : 헤더, 본문, 바닥글 의미-->
+    </table>
+</body>
+</html>

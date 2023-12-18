@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello HTML</title>
+    <style>
+        body{
+            background-image: url(https://t4.ftcdn.net/jpg/01/34/55/37/360_F_134553760_dG8LCoogc2urDoePqHX6GG0kD6dUo1jI.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: verdana;
+        }
+        h1{
+            background-color: white;
+            color: coral;
+            text-align: center;
+            padding:20px
+        }
+        h4{
+            background-color: brown ;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h3{
+            background-color: white;
+            padding: 10px;
+        }
+        h2{
+            background-color: white;
+            font-weight: bold;
+            
+        }
+        table {
+            background-color: white;
+            border: 3px solid;
+            text-align: left;
+            width: 80%
+        }
+        ul{
+            background-color: white
+        }
+        li{
+            margin: 10px;
+        }
+        th{
+            border: 1px solid
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <h4>** 각 정보는 본인에 맞춰서 작성하세요. **<br>
+        (글씨체는 verdana로 설정)</h4><br>
+    <h3 >내 정보</h3>
+    <ul >
+        <li>이름 : 이현오</li>
+        <li>성별 : 남자</li>
+        <li>나이 : 32</li>
+        <li>직업 : 무직</li>
+        <li>소속 : <a href="https://kb.step.or.kr/main.do">KB(경북산업직업전문학교)</a></li>
+        <li>좋아하는 것
+            <dl>
+                <dt>커피(Coffee)</dt>
+                <dd>(코멘트) "카페인이 세상을 지배한다."</dd>
+                <dt>초밥(Sushi)</dt>
+                <dd>(코멘트) "연어 가격 언제 내려가나."</dd>
+                <dt>백준(Baekjoon)</dt>
+                <dd>(코멘트) "본인도 스스로를 이해하지 못하는 중."</dd>
+            </dl>
+        </li>
+        <li>프로필사진<br>
+            <img src="data:image/jpeg;base64,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"
+                width="300px" height="300px">
+        </li>
+    </ul>
+
+    <h3><b>일정</b></h3>
+    <table >
+        <tr>
+            <th>우선순위</th>
+            <th>마감기한</th>
+            <th>내용</th>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>8/25</td>
+            <td>숙면</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>8/25</td>
+            <td>저녁 약속(음주 적당히)</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>9/4</td>
+            <td>개강 준비</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>무기한</td>
+            <td>백준 하루에 1문제씩 풀기</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>8/26</td>
+            <td>가계부 작성</td>
+        </tr>
+    </table>
+    <h4 >** 수고하셨습니다 **</h4>
+    <h1>Goodbye World</h1>
+
+</body>
+
+</html>
