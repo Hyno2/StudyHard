@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<form>태그 : 입력의 양식 정의-->
+    <!--<form> 태그안에 여러가지 입력 칸을 넣는다-->
+    <form>
+        <!--input 태그 : type 속성값에 따라, 입력 형태들이 달라진다-->
+        <!--type 디폴트값은 text-->
+        <input type="text" name="search"/><br>
+        <input type="file"/><br>
+        <input type="button"/><br>
+        <input type="password"/><br>
+        <input type="color"/><br>
+        <input type="date"/><br>
+        <input type="range"/><br>
+        <input type="checkbox"/><br>
+        <input type="radio"/><br>
+        <input type="hidden"/><br>
+        <input type="image"/>
+        <hr>
+
+        <!--checkbox는 복수선택가능 radio는 하나만 선택-->
+        <!--<label> 태그 : 입력값 설명, 클릭했을 때에 연결되있는 input에 포커싱-->
+        <input type="radio" id="male" name="gender" value="male"/><label for="male">남</label><br>
+        <input type="radio" id="female" name="gender" value="female"/><label for="female">녀</label><br>
+        <hr>
+        <input type="checkbox" id="soccer" name="hobby" value="soccer"/><label for="soccer">축구</label><br>
+        <input type="checkbox" id="basketball" name="hobby" value="basketball"/><label for="basketball">농구</label><br>
+        <input type="checkbox" id="volleyball" name="hobby" value="volleyball"/><label for="volleyball">배구</label><br>
+
+        <label for ="name">이름</label>
+        <input id="name">
+
+    </form>
+
+</body>
+</html>
