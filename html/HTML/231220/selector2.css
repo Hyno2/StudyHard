@@ -1,0 +1,17 @@
+/*후손 선택자 : 특정 태그 안에 있는 후손을 선택
+[선택자1] [선택자2] {선언문들}      (공백을 이용해서 후손을 선택)*/
+
+div h3{
+    color: blue;
+}
+#header h3,#header>p{ 
+    border: 3px solid red;
+}
+
+/* 자손 선택자 : 특정 태그 "바로 안에 있는" 자손을 선택
+[선택자1][선택자2]{선언문들}        (> 기호를 사용)*/
+
+
+table>tbody{
+    border: 1px solid black;
+}

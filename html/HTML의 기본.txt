@@ -176,6 +176,7 @@ loop>
 9 입력양식 태그
 <!--<form>태그 : 입력의 양식 정의-->
  <!--<form> 태그안에 여러가지 입력 칸을 넣는다-->
+placeholder ="안내해주는 메세지"
 
 <!--input 태그 : type 속성값에 따라, 입력 형태들이 달라진다-->
         <!--type 디폴트값은 text-->
@@ -184,7 +185,8 @@ type의 종류 : text, file, button, password, color, date, range, checkbox, rad
 
 checkbox는 복수선택가능 radio는 하나만 선택
 
-<!--<label> 태그 : 입력값 설명, 클릭했을 때에 연결되있는 input에 포커싱-->
+<!--<label> 태그 : 입력값 설명-->
+<!--input id와 label for 을 맞췄을때 클릭시 연결되있는 input에 포커싱-->
 ex)<label for ="name">이름</label>
     <input id="name"  type="text">
     이름을 클릭하면 text박스에 포커스된다

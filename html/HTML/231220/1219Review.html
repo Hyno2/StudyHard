@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--form 태그 : 입력 양식 선언하는 태그-->
+    <form>
+        <!-- 웬만해선 여기 안에 입력 태그드를 나열-->
+        <!-- input 태그 : 대표적인 html 입력 태그-->
+        <!-- label 태그 : 입력값에 대한 설명 추가 (+입력값을 포커싱)-->
+        <input type="number" placeholder="내용을입력하세요"> <br>
+        <!-- radio checkbox 차이 : 단일 // 복수 선택-->
+        <!-- name 속성 : 카테고리 정의하는 속성, value 속성 : 실질적인 입력값-->
+        성별
+        <input id="man" type="radio" name="gender" value="male">
+        <label for="man">남성</label>
+        <input id="girl" type="radio" name="gender" value="female">
+        <label for="girl">여성</label>
+        <br>
+        좋아하는과일
+        <input id="apple" type="checkbox" name="fruit" value="apple">
+        <label for="apple">사과</label>
+        <input id="melon" type="checkbox" name="fruit" value="melon">
+        <label for="melon">멜론</label>
+        <input id="watermelon" type="checkbox" name="fruit" value="watermelon">
+        <label for="watermelon">수박</label>
+        <br>        
+        <input type="date">
+        <br><br>
+
+        <!--textarea 태그 : 여러 줄 입력-->
+        <textarea cols="20" rows="10">
+            내용을입력하세요
+        </textarea>
+        <br>
+
+        <!--select 태그 : 선택 양식 선언-->
+        전화번호
+        <select>
+        <option>010</option>
+        <option>011</option>
+        <option>016</option>
+        </select>
+        -
+        <input id="second_tel" style="width: 50px;">
+        -
+        <input id="second_tel" style="width: 50px;">
+        <br>
+    </form>
+
+    <!-- 공간 분할 태그-->
+    <!--display 속성 : block inline inline-block-->
+    <!--div 태그 : 디폴트로 block 속성인 공간분할-->
+    <!--span 태그 : 디폴트로 inline 속성인 공간분할-->
+
+    <div style="border: 3px solid darkmagenta;">
+        div 태그
+    </div>
+
+    <span style="border: 3px solid darkblue;">
+        span 태그
+    </span>
+</body>
+</html>

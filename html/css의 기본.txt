@@ -1,0 +1,105 @@
+css의 기본
+/*css 주석
+  css 파일은 화면 디자인을 담당한다
+  css 파일에 작성된대로 규칙적으로 html 파일을 작성했다면,
+  여러 html 파일에 대해서 하나의 css파일로 통일적으로 스타일 적용이 가능
+  */
+
+/*
+  선택자 :: 특정 조건에 맞는 태그를 선택하는 구문
+        => 여러개를 복합적으로 작성가능, 여러 태그들을 나열해서 작성할 수도 있다
+  선언문 :: 적용할 스타일 정의
+  h1, p{ -> 선택자
+    속성명1: 속성값1; -> 선언문1
+    속성명2: 속성값2; -> 선언문2
+    ...
+  }
+*/
+
+/*
+CSS 스타일 적용 방법
+1. 외부 CSS 파일을 html 파일에 적용
+    <head>에 아래 구문을 작성해야함
+     <link rel="stylesheet" href="CSS파일명">
+2. html 파일 내부에 <style> 삽입하여 스타일 적용
+3. 태그에 직접적으로 style 속성 부여
+*/
+
+/* 전체 선택자(*) : html 페이지안에있는 모든 태그들을 선택*/
+/* *{
+    border: 2px solid aquamarine;
+} */
+h1, h3{
+    background-color: blueviolet;
+    font-style: italic;
+}
+
+/* 아이디 선택자 : 특정 아이디 값을 갖고 있는 태그 선택 
+"#" 기호를 사용해서 선택
+아래 구문 같은 경우엔, id 값이 반드시 같아야만 적용(first_h1_auto여도 적용안됌)*/
+
+#first_h1{
+    font-size: 500%;
+}
+
+/* 클래스 선택자 : 각 태그들의 class값들 중 특정 값이 있는 태그 선택
+"." 기호를 사용해서 선택
+class값 중 지정된 값이 포함되어있기만 하다면 적용된다*/
+.first{
+    border: 2px solid black;
+}
+
+/* h1태그 전체와 h2태그들 중 클래스값 중 first라는 값이 포함되어있는 태그 선택*/
+h1,  h2.first{
+    text-align: center;
+}
+
+
+/* CSS파일 작성시 개략적인 스타일 설정을 윗부분에 작성 후
+   구체적인 스타일 설정을 파일 아래부분에 작성하면좋다*/
+
+/* label 태그들 중 for 속성이 "female"인 것만 적용*/
+label[for="female"]{
+    color: pink;
+}
+
+/* label 태그들 중 for 속성인 것만 적용*/
+label[for]{
+    color: blue;
+}
+
+/* 반응 선택자 : 
+    ":active(마우스를 눌렀을 때 스타일 적용)"
+    ":hover(마우스를 가져다 댔을 때 스타일 적용)"
+    [선택자]:hover/active {선언문들}
+*/
+
+/* transition : 전환과 관련한 스타일 부여 */
+transition: all 2s; /* 전환과 관련한 모든 진행 시간을 2초로 지정한다*/
+transition-timing-function: ease-in-out; /*전환형식 : 디폴트값은 linear(일정한 속도로 변환)*/
+transition-delay: 1s; /* 1초 정도 가만히 있다가 전환 수행*/
+
+<!--후손 선택자 : 특정 태그 안에 있는 후손을 선택-->
+<!--[선택자1] [선택자2] {선언문들}      (공백을 이용해서 후손을 선택)-->
+#header h3,p{ /* #header의 후손은 h3와 모든 p에 스타일 적용*/
+    border: 3px solid red;
+}
+
+/* 자손 선택자 : 특정 태그 "바로 안에 있는" 자손을 선택
+[선택자1][선택자2]{선언문들}        (> 기호를 사용)*/
+#header h3,#header>p{ /* #header의 후손은 h3와  p에 스타일 적용*/
+    border: 3px solid red;
+}
+table 태그의 직속 후손은 tbody밖에 없다-->
+
+/* 동위 연산자 : +, ~ 
+[선택자1] + [선택자2]: [선택자1] 바로뒤에 위치하는 [선택자2] 선택 (반드시 하나만 선택)
+[선택자1] ~ [선택자2]: [선택자1] 뒤에 위치하는 [선택자2] 선택*/
+
+h1+p{
+    color: aqua;
+}
+
+h1~p{
+    background-color: brown;
+}

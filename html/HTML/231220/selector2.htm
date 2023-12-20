@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="selector2.css">
+
+
+</head>
+
+<body>
+    <div id="header">
+        <h3>헤더안의 h3</h3> <!--#header div의 후손-->
+        <div>
+            <p>헤더 안의 p</p> <!-- #header div의 후손은 맞지만, 자손은 아닌상태-->
+        </div>
+    </div>
+
+
+    <div id="para">
+        <h3>본문안의 h3</h3> <!--#para div의 후손-->
+        <p>본문 안의 p</p>
+    </div>
+
+    <table>
+        <tbody> <!--tbody 태그는 생략가능 -> table 태그의 직속 후손은 tbody밖에 없다-->
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+            </tr>
+            <tr>
+                <td>이현오</td>
+                <td>남성</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
