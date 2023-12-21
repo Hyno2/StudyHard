@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+}
+
+div.left{
+    float: left;
+    margin-left: 30%;
+   
+}
+div.right{
+    float: right;
+    margin-right: 30%;
+    
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+#img1{
+    animation: moveright 4s infinite;
+}
+#img2{
+    animation: moveleft 4s infinite;
+}
+
+
+
+@keyframes moveleft{
+    0% { width: 100px; height: 100px; translateX(0);}   
+    25% {width: 150px; height: 150px; translateX(0);}
+    50% {width: 200px; height: 200px; translateX(-30px);}
+    75% {width: 150px; height: 150px; translateX(0);}
+    100%{width: 100px; height: 100px; translateX(0);}
+}
+@keyframes moveright{
+    0%  {width: 100px; height: 100px; translateX(0);}   
+    25% {width: 150px; height: 150px;  translateX(0);}
+    50% {width: 200px; height: 200px; translateX(30px);}
+    75% {width: 150px; height: 150px;  translateX(0);}
+    100%{width: 100px; height: 100px;  translateX(0);}
+}

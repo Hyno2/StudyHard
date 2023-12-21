@@ -1,0 +1,23 @@
+/* 링크 선택자 : 
+:link(href 속성값을 갖고 있는 a 태그 선택)  
+:visited(이미 지정된 링크를 방문한 태그)
+ */
+ a:link{
+    color: black;
+ }
+ a:visited{
+    color: darkred;
+ }
+ #naver:active{
+    color: green;
+ }
+ #daum:active{
+    color: green;
+ }
+ #google:active{
+    animation-name: rainbow;
+    animation-duration: 3s;
+ }
+ #youtube:active{
+    color: green;
+ }

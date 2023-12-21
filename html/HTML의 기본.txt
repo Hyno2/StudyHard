@@ -32,6 +32,18 @@ background-size: cover; <!--하나의이미지로 배경다채우기-->
 </body>
 </html>
 
+ <!-- form 태그 : 입력 양식 선언, 입력값 전송(submit 타입 input 필수 필요)
+전송 했을 때 다른 html 파일을 불러올 수도 있음
+form태그 속성 : method, action(다른 html or url 불러옴)
+ -->
+    <form action="login.html">
+        <label for="id">아이디 입력</label>
+        <input type="text" name="id" id="id"><br>
+        <label for="password">비밀번호 입력</label>
+        <input type="password" name="password" id="password"><br>
+        <input type="submit" value="로그인">
+    </form>
+
 2. HTML4 문서 형식
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
 "http://www.w3.org/TR/html4/frameset.dtd">

@@ -1,0 +1,24 @@
+/* 상태 선택자 : :checked, :focus, :enabled, :disabled
+
+*/
+input:focus{
+    background-color: aquamarine;
+}
+input:enabled{
+    background-color: beige;
+}
+input:disabled{
+    background-color: gray;
+}
+
+/* 타입이 체크박스인 input 태그를 체크했을때 */
+input[type="checkbox"]:checked+div{
+    height: 0px;
+}
+div{
+    border: 3px solid saddlebrown;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    transition-delay: 1s;
+}

@@ -103,3 +103,81 @@ h1+p{
 h1~p{
     background-color: brown;
 }
+
+/* 상태 선택자 : :checked, :focus, :enabled, :disabled
+
+*/
+input:focus{
+    background-color: aquamarine;
+}
+input:enabled{
+    background-color: beige;
+}
+input:disabled{
+    background-color: gray;
+}
+
+/* 타입이 체크박스인 input 태그를 체크했을때 */
+input[type="checkbox"]:checked+div{
+    height: 0px;
+}
+div{
+    overflow: hidden;
+}
+
+/* 구조 선택자: :first-child :last-child
+h1:first-child => 첫번째로 나타는 태그가 h1이여만 적용가능
+반드시 지정된 위치에 지정된 태그가 있어야만 스타일 적용된다
+p:last-child => 마지막의 태그가 p여야만 적용가능
+nth는 위치지정 여기선 전체
+*/
+p:nth-last-child(2){
+    background-color: red;
+}
+
+/* 구조 선택자 : :first-of-type , :last-of-type*/
+/* h1:first-of-type => 처음으로 나타난 h1 태그에 대해 스타일 적용*/
+p:nth-last-of-type(3){
+    background-color: aqua;
+}
+
+/* 링크 선택자 : 
+:link(href 속성값을 갖고 있는 a 태그 선택)  
+:visited(이미 지정된 링크를 방문한 태그)
+ */
+ a:link{
+    color: black;
+ }
+ a:visited{
+    color: darkred;
+ }
+ #naver:active{
+    color: green;
+ }
+
+/* 부정 선택자 : :not(부정하고자 하는 선택자)*/
+input:not([type="text"]){
+    background-color: lightgray;
+}
+
+/* 문자 선택자 : 지정된 태그에 있어서 특정 문자에 스타일 지정 
+   시작 문자 선택자 : ::first-letter, ::first-line
+*/
+p::first-letter{
+    font-size: 200%;
+    color: red;
+}
+p::first-line{
+    color: blue;
+}
+
+/* ::selection => 사용자가 임의로 드래그한 글자 선택*/
+p::selection{
+    background-color: lightgray;
+    color: green;
+}
+
+/* keframes :: 애니메이션을 생성하는 키워드*/
+animation: rainbow;
+animation-duration: 3s;
+animation-iteration-count: infinite;
