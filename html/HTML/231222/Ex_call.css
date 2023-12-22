@@ -1,0 +1,31 @@
+body{
+    text-align: center;
+    margin: 0 auto;
+}
+img{
+    width: 100px;
+    height: 100px;
+    animation: sizeUpDown 4s infinite;
+}
+hr{
+    width: 25%;
+}
+/* float 속성 : right, left값 가질 수 있음 (이걸 통해서 한 줄에 나란히 공간 차지하게 끔 함)
+   div 태그는 display 디폴트 값이 block이다*/
+div.left{
+    float: left;
+    margin-left: 35%;
+}
+div.right{
+    float: right;
+    margin-right: 35%;
+}
+
+/* keyframes : 애니메이션 생성 (0~100% 사이의 동작 정의)*/
+@keyframes sizeUpDown{
+    0% {width: 100px; height: 100px;}
+    25% {width: 150px; height: 150px;}
+    50% {width: 200px; height: 200px;}
+    75% {width: 150px; height: 150px;}
+    100% {width: 100px; height: 100px;}
+}

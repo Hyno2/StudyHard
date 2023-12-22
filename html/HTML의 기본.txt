@@ -170,6 +170,23 @@ form태그 속성 : method, action(다른 html or url 불러옴)
 <img src = "이미지주소나, 파일" width = "100px" height="100px" alt ="오류나면 이메세지 표시">
 width height 넓이높이조절 alt 속성은 이미지를 보여줄 수 없을 때 해당 이미지를 대체할 텍스트를 명시 
 
+  <!-- picture 태그 : srcset, media 속성
+         src 속성 : 불러오는 속성, srcset 속성 : src 의미 + "set"
+         picture 태그와 source 태그를 함께 사용하여
+         보여주는 위치는 공유하되, 불러오는 이미지는 조건에 따라 다르게 설정-->
+    <picture>
+        <!-- 높이 크기가 400px 이하일 때  아래 사진을 보여줘라-->
+        <source srcset="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg"
+        media="(max-height:800px)">
+        <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47BiCeOGtyrZGqYU5-B8_1zTYMbAwkiqSoHWLqyO37r6Gk7-_6rkEf2-UWkHW3dfIDoQ&usqp=CAU"
+        >
+        <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuP8pY1dl06cXa0bzTVfxpKXdbaV6Ci5lR_bE__es6Z5oXbx_cB-B_f1xkaebGIAG-cX0&usqp=CAU"
+        >
+        <img>
+        <!-- source 태그들 중 하나는 media 설정을 해주면 안됨
+            조건에 상관없이 디폴트 사진이 하나 있어야해서-->
+    </picture>
+
 7 오디오 태그
 <audio src = "" controls></audio>
 src = 경로지정

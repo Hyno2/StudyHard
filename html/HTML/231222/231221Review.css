@@ -1,0 +1,51 @@
+/* 선택자 : 상태, 링크, 부정, 구조 문자
+상태 선택자: focus, enabled, disabled, checked 
+:enabled 적용한 뒤 :focus 적용해야 스타일 적용 됨*/
+input:enabled{
+    background-color: bisque;
+
+}
+input:disabled{
+    background-color: darkblue;
+}
+input:focus{
+    background-color: aqua;
+    color: red;
+}
+/* 구조선택자 : :first-child, :last-child, :first-of-type, :last-of-type
+    공통점 : 형제 관계(종속 관계가아님 동등함) 상태에서 적용 
+    :nth-child(숫자), :nth-of-type()*/
+
+/* h2:first-child : h2 태그가 body에서 가장 먼저나타났다면, 스타일적용해라
+   h2:last-child : h2 태그가 body에서 가장 아래에 나타났다면 스타일적용해라
+   p:first-of-type : 가장 먼저 나타난 p태그에 스타일 적용해라
+   p:last-of-type : 가장 나중에 나타난 p태그에 스타일 적용해라*/
+p:last-of-type{
+    background-color: chartreuse;
+}
+
+/* 부정선택자 : :not(부정하고자하는 선택자)*/
+
+/* 링크선택자 : :link :visited
+    :link : href 속성이 적의되어있는 a태그 스타일 지정*/
+a:link{
+    color: purple;
+    border: 3px solid darkblue;
+}
+a:visited{
+    color: aqua;
+
+}
+
+/* 문자 선택자 : ::first-letter, ::first-line* ::selection */
+p:first-child:first-letter{
+    font-size: 250%;
+    background-color: black;
+    color: white;
+}
+p:first-child::first-line{
+    color: gray;
+}
+p::selection{
+    background-color: brown;
+}
