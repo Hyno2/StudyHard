@@ -1,0 +1,21 @@
+JS 기본
+웹사이트 f12 에서 Console에서 시작
+문자와 문자열차이가 없고
+clear()하면 화면청소
+자바스크립트에서 같다는 ===세개 사용
+
+html에서 자바스크립트 구문 작성하기
+<script></script>
+// 주석은 이렇게 사용
+// 보통<script> 태그는 body태그의 최하단에 위치한다
+
+// alert() : 알림창 또는 경고창 출력문
+alert("문자"); 
+
+// console.log : Console로그에서 출력함
+console.log("검사창에서만 볼 수 있음")
+
+// 문자열 합치기가능 ex)"str"+"ing" = "string"
+
+// typeof() : 특정값의 타입을 반환
+자료형 number, string, boolean
