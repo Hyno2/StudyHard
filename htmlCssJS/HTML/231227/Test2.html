@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+while(true){
+ let input1 = prompt("첫번째 숫자 입력");
+ let input2 = prompt("두번째 숫자 입력");
+  // 숫자 형 변환
+ let a = Number(input1);
+ let b = Number(input2);
+ if(a===0 && b ===0){
+    break;
+}
+let operator = prompt("연산자 입력 ex) + - * / %");
+
+
+
+confirm(`${a} ${operator} ${b} = ${runOperator(a,b,operator)}`);
+}
+
+function runOperator(a,b,c){
+    if(c==="+"){
+        let result = a+b;
+        return result;
+    }
+    else if(c==="-"){
+        let result = a-b;
+        return result;
+    }
+    else if(c==="*"){
+        let result = a*b;
+        return result;
+    }
+    else if(c==="/"){
+        let result = a/b;
+        return result;
+    }
+    else if(c==="%"){
+        let result = a%b;
+        return result;
+    }
+
+}
+    </script>
+</body>
+</html>

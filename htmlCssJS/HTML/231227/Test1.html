@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 이름, 나이, 성별(boolean) 입력받고
+    let name = prompt("이름 입력하세요", "ex) 홍길동");
+    let number = prompt("나이 입력하세요", "ex) 32");
+    let sex = confirm("남성일때 확인 여성일때 취소눌러주세요",);
+    if(sex==true){
+        sex = "남자";
+    }
+    else{
+        sex = "여자";
+    }
+
+    let age = Number(number);
+    
+    // 이들을 하나의 배열에 저장한다.
+    let a = [];
+    
+    a.push(name,age,sex);
+
+ 
+    // 그리고 배열에 저장된 값들을 순차적으로 html에 출력한다
+    for(let i=0;i<3;i++){
+        document.write(a[i]+"<br>");
+    }
+
+    </script>
+</body>
+</html>
