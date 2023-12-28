@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_kgAELPO47DL5L-gi4UcVwlnUN3Ha9M02Aw&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        form {
+
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        [type="radio"] {
+            width: 20px;
+            height: 20px;
+            border: 1px;
+        }
+
+        [type="button"] {
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>MBTI체크</h1>
+        <label for="E">외향적 (E)</label><input type="radio" name="EI" id="E">
+        <label for="I">내향적 (I)</label><input type="radio" name="EI" id="I">
+        <br><br>
+        <label for="S">현실형 (S)</label><input type="radio" name="SN" id="S">
+        <label for="N">직관형 (N)</label><input type="radio" name="SN" id="N">
+        <br><br>
+        <label for="F">감성적 (F)</label><input type="radio" name="FT" id="F">
+        <label for="T">이성적 (T)</label><input type="radio" name="FT" id="T">
+        <br><br>
+        <label for="J">계확형 (J)</label><input type="radio" name="JP" id="J">
+        <label for="P">즉흥형 (P)</label><input type="radio" name="JP" id="P">
+        <br><br>
+        <input type="button" value="제출" id="submit">
+
+    </form>
+    <script>
+        document.getElementById("submit").addEventListener("click", calculateMBTI);
+
+        function calculateMBTI() {
+            let selectmbti = {
+                EI: selectedValue("EI"),
+                SN: selectedValue("SN"),
+                FT: selectedValue("FT"),
+                JP: selectedValue("JP")
+            };
+
+            let result = selectmbti.EI + selectmbti.SN + selectmbti.FT + selectmbti.JP;
+            alert("당신의 MBTI는 " + result + "입니다.");
+        }
+
+        function selectedValue(name) {
+            let elements = document.getElementsByName(name);
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].checked) {
+                    return elements[i].id;
+                }
+            }
+            return "";
+        }
+    </script>
+
+</body>
+
+</html>

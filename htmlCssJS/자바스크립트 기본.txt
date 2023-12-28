@@ -9,18 +9,17 @@ html에서 자바스크립트 구문 작성하기
 // 주석은 이렇게 사용
 // 보통<script> 태그는 body태그의 최하단에 위치한다
 
-출력 4가지
-// alert() : 알림창 또는 경고창 출력문
-alert("문자"); 
-
-// console.log : Console로그에서 출력함
-console.log("검사창에서만 볼 수 있음")
-
-document.write("HTML 페이지 상 출력");  // 자바스크립트로 html 페이지 상 직접 출력할때 사용 (디버깅 용도로 많이 씀)
-
-//innerHTML
-        let st=document.getElementById("str"); // 변수 st - id가 "str"인 요소 연결
-        st.innerHTML="변경된 문구"
+// 출력문 4가지
+        // 1. alert() : 경고창/ 알림창 출력문
+        alert("경고창! / 알림창!");
+        // 2. console.log : 콘솔 상 출력문
+        console.log("콘솔창에서 뜨는 출력문");
+        // 3. document.write() : HTML 에 즉시 출력
+        document.write("HTML에 직접적인 출력 디버깅용도로 많이씀");
+        // 4. innerHTML : 직접적인 출력x, html의 특정 요소값 변경해서 출력한다
+        //                 document.getElementByID("ID값"); id name 있다 
+        let p = document.getElementById("hi");
+        p.innerHTML="변경한 출력메세지입니다."
 
 // 템플릿 문자열 `문자 ${값}`
         console.log(`999*99의 결과는 ${999*999}입니다.`)
@@ -46,32 +45,16 @@ console.log("17+3 값은${17+30}입니다.")
         // 삼항연산자 : ? 
 	// [조건식] ? [참일때 수행할 명령어] : [거짓일때 수행할 명령어]
 
-// 강제 형변환 (Number(), String(), Boolean())
-        let hello ="안뇽";  //Hello 변수가 자동으로 string 형
-        console.log(Boolean(hello));
-        console.log(Number('A')); // NaN = "Not a Number" 숫자 연산이 잘 이루어지지 않았을 때
-        console.log(typeof(Number('A')));
+// 강제 형 변환 : Number(), String(), Boolean()
 
-// 입력문 : prompt(), confirm()
-   // prompt() : 문자형 타입 입력 받는데에 사용
-        // prompt("질문지","디폴트값");
-        let name=prompt("이름을 입력하세요", "ex) 홍길동"); //뒤에 , 하고 적으면 디폴트값이 나옴
-        console.log(typeof(name)) // 결과값 string으로 나옴
+// 입력문 : prompt, confirm()
+        // prompt() : 문자 입력 받음 숫자 입력에도 사용됨
+        let name = prompt("이름 입력하세요", "ex) 홍길동");
+        let input= prompt("숫자 입력하세요", "ex) 1"); // 숫자도 문자로 입력받게 됨
+        let age= Number(input); // 강제 형 변환
+        // confirm() : true/false 입력 받음 확인/취소 boolean
+        confirm("이대로 진행하시겠습니까?");
 
-        let input=prompt("나이를 입력하세요");
-        console.log(typeof(input))  // 결과값 string으로 나옴
-        let age=Number(input);  // 입력값을 숫자형으로 강제형변환후 새로운 변수에 삽입
-        console.log(typeof(age))
-
-// confirm() : 불 타입 입력 받는데 사용
-let tf=confirm("남성이면 확인, 여성이면 취소를 눌러주세요");
-tf===true ? document.write("남성입니다."): document.write("여성입니다");
-// if(tf===true){
-//     document.write("남성입니다.");
-// }
-// else{
-//     document.write("여성입니다.");
-// }
 
 // 배열 : "여러 개의 값을 하나의 이름으로 저장하는 공간"
 //          js 같은 경우 자료형의 제약 없고 공간의 제약 없음
@@ -80,17 +63,22 @@ tf===true ? document.write("남성입니다."): document.write("여성입니다"
 // introduce라는 변수는 배열이다 라고 선언함
        let introduce = [];
 
-        // 임의의 위치를 지정해서 값을 넣을 수 있다.
+// 임의의 위치를 지정해서 값을 넣을 수 있다.
         introduce[1] ="apple";
         console.log(introduce[1]);
         for(let i=0;i<5;i++){
             introduce[i]=100;
         }
 
-        // push()를 통해 순차적으로 삽입
+        let student=["이현오",32,true,'A']; // 선언과 동시에 값 저장
+        let stu=Array("이현오",32,true,'A') // 선언과 동시에 값 저장
+        let stud=new Array("이현오",32,true,'A') // 선언과 동시에 값저장
+
+// push()를 통해 순차적으로 삽입
         introduce.push("이현오");
         introduce.push(25);
         introduce.push(false);
+
 
  // 함수 : "특정 기능을 하는 명령문들의 집합"
         // 함수 구현
@@ -124,7 +112,6 @@ tf===true ? document.write("남성입니다."): document.write("여성입니다"
         }
         else{
             element2.innerHTML="취소 누르셔서 다시 실행햐주시길 바랍니다.";
-
         }
 
         function isSuccess(a,g){ // a : 나이 g : 성별
@@ -134,5 +121,29 @@ tf===true ? document.write("남성입니다."): document.write("여성입니다"
             else{
                 return false;
             }
-
         }
+
+// 객체
+// 객체 선언
+// let 객체명 = {멤버명: 멤버값, ...};
+
+  let mine={
+            name : "이현오",
+            age : 32,
+            gender : "남성",
+            blood : 'O',
+            /*객체안의 함수 작성법
+            함수명 : function(매개변수명,...){
+                명령문들;   
+            }
+            */
+           print: function(){
+            document.write(this.name+"<br>");
+            document.write(this.age+"<br>");
+            document.write(this.gender+"<br>");
+            document.write(this.blood+"<br>");
+           }
+        };
+
+// 객체 멤버 사용 : 객체명.멤버명, 객체명["멤버명"]
+

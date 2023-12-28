@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p id="pTag">본문태그</p>
+        <input type="button" value="hide" id="hide">
+        <input type="button" value="show" id="show">
+        <input type="button" value="toggle" id="toggle">
+
+    </form>
+    
+    <script>
+        $(document).ready(function(){
+            $("#hide").on("click",function(){
+                $("#pTag").hide(2000);
+                alert("p태그가 사라집니다")
+            })
+            $("#show").on("click",function(){
+                $("#pTag").show(2000);
+                alert("p태그가 나타납니다")
+            })
+            $("#toggle").on("click",function(){
+                $("#pTag").toggle("show");
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

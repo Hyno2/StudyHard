@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="pTag">Jquery Test</p>
+    <p>click me</p>
+    <p>click meeeee</p>
+    <h3>여기에 마우스 대보기</h3>
+    <label>test용</label>
+    <input type="text">
+    <script>
+        // 이벤트 : 동작에 대한 행동 서술
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).css("color", "red");
+                $(this).text("더블클릭시 사라집니다."); // 텍스트 요소값 변경
+                
+            })
+        })
+
+        $(document).ready(function(){
+            $("p").dblclick(function(){ // 더블클릭
+                $(this).hide();
+                alert("태그 사라짐");
+                
+            })
+        })
+
+        // mouseenter : 커서를 요소에 갖다댓을때
+        // $(document).ready(function(){
+        //     $("h3").mouseenter(function(){
+        //         document.write("h3에 마우스를 올림")
+        //     })
+        // })
+
+        // hover() : 커서의 위치에 따른 행동 정의 (마우스 갖다댔을때, 뺏을때)
+        $(document).ready(function(){
+            $("h3").hover(function(){
+                alert("h3에 마우스를 올림")
+            },
+            function(){
+                alert("h3에서 마우스가 떠남");
+            }
+            )
+        })
+
+        // focus() : 포커싱이 되었을때
+        $(document).ready(function(){
+            $("[type=text]").focus(function(){ // 포커싱이 되었을때
+                $(this).css("background-color","green");
+            })
+            $("[type=text]").blur(function(){ // 포커싱이 풀렸을때
+                $(this).css("background-color","gray");
+            })
+        })
+    </script>
+    
+</body>
+</html>
