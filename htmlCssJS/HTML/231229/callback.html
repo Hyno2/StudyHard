@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button>본문 숨기기</button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, perferendis? Magnam, necessitatibus doloremque deserunt ipsum ducimus vel corrupti voluptatibus quae eius rem, excepturi tempore distinctio asperiores quos? Nihil, facere velit!</p>
+    <script>
+        // 콜백 함수 : 이벤트 처리한 뒤 후처리를 어떻게 할 것 인지 정의하는 함수
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").toggle(1000, function(){
+                    // hide 처리 뒤 경고창 띄우는 후처리 진행함
+                    alert("버튼을 클릭하였습니다.")
+                });
+            })
+        })
+    </script>
+</body>
+</html>

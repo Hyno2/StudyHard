@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let jungchegi = {
+            score: [0, 0, 0, 0, 0],
+            good: 0,
+            subject_score: function (sc) {
+                if (sc >= 40) {
+                    this.good++;
+                }
+
+            },
+            sum_score: function () {
+                let sum = 0;
+                for (let score of this.score) {
+                    sum += score;
+                }
+                let ave = sum / 5;
+                if (ave >= 60) {
+                    this.good++;
+                }
+            },
+            print: function () {
+                for (let i = 0; i < 5; i++) {
+                    console.log(`과목${i + 1}의 점수는 = ${this.score[i]}`);
+                }
+
+                // 합 
+                let sum = 0;
+                for (let score of this.score) {
+                    sum += score;
+                }
+
+                let ave = sum / 5;
+                console.log(`총 평균은 ${ave}`);
+
+                // 합불 여부 출력
+                console.log(this.good >= 6 ? "합격" : "불합격");
+
+            }
+        }
+        for(let i=0;i<jungchegi.score.length;i++){
+            jungchegi.score[i] = Number(prompt(`과목${i+1} 점수`));
+            jungchegi.subject_score(jungchegi.score[i]);
+        }
+        
+        // 메소드 호출
+       
+        jungchegi.sum_score();
+        jungchegi.print();
+
+
+
+
+    </script>
+
+</body>
+
+</html>
