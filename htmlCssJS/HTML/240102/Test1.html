@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>본문</p>
+    <button>slide버튼</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").slideUp(1000).slideDown(1000,() => { alert("버튼클릭") })
+                
+            })
+        })
+    </script>
+</body>
+</html>

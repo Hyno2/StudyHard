@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>clone() 메소드</h3>
+    <button id="clone">요소 복제</button>
+    <ul id="list">
+        <li id="first">첫번째 li</li>
+        <li>두번째 li</li>
+    </ul>
+    <script>
+        // 요소 복제 : clone()
+        $(function(){
+            $("#clone").click(function(){
+                $("#first").clone().appendTo("#list");
+            })
+        })
+        // 요소 삭제 :
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">이 요소는 값이 변경될 예정입니다.</p>
+    <input type="text">
+    <a href="http://www.w3schools.com/">w3schools 사이트 접속</a>
+    <button id="change">값 변경</button>
+    <button id="change_html">html 변경</button>
+    <button id="change_val">value 변경</button>
+    <button id="change_attr">하이퍼링크 변경</button>
+    <script>
+        // 2. set : 설정하다.
+        $(function(){
+            $("#change").click(function(){
+                $("#para").text("요소값을 이미 변경하였습니다.");
+            })
+            $("#change_html").click(function(){
+                $("#para").html("<span style='color:red'>change text</span> ")
+            })
+            $("#change_val").click(function(){
+                $("input").val("soo hungry")
+            })
+            $("#change_attr").click(function(){
+                $("a").attr("href", "http://www.naver.com/")
+                $("a").text("naver 사이트 접속")
+            })
+        })
+    </script>
+</body>
+</html>

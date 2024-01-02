@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="bt">출력 시작</button>
+    <ul id="list"></ul>
+    <script>
+        let name= prompt("이름 입력", "ex) 홍길동");
+        let age=Number(prompt("나이 입력", "ex) 32"));
+        let gender= prompt("성별 입력", "ex) 남");
+        let blood=prompt("혈액형 입력", "ex) O");
+        let height= Number(prompt("키 입력", "ex) 182"));
+
+        let student = {
+            이름: name,
+            나이: age,
+            성별: gender,
+            혈액형: blood,
+            키: height
+        };
+
+        let count = 0; // 버튼을 클릭한 횟수를 저장하는 변수
+        // key값을 배열에 따로저장
+        let index = ["이름", "나이", "성별", "혈액형", "키"];
+
+        $("#bt").click(function () {
+            if (index < 5) {
+
+
+                // 기존 리스트에 추가
+                $("#list").append("<li>" + key + ": " + value + "</li>");
+
+                // 다음 키로 이동
+                index++;
+            } else {
+                // 6번째 클릭부터 "데이터 없음" 출력
+                $("#list").append("<li>데이터 없음</li>");
+            }
+        });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 정보 출력</title>
+    <style>
+        button {
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="bt">출력 시작</button>
+    <ul id="list"></ul>
+
+    <script>
+        $(function() {
+            let student = {
+                name: prompt("이름 입력", "ex) 홍길동"),
+                age: Number(prompt("나이 입력", "ex) 32")),
+                gender: prompt("성별 입력", "ex) 남"),
+                blood: prompt("혈액형 입력", "ex) O"),
+                height: Number(prompt("키 입력", "ex) 182"))
+            };
+
+            let keys = Object.keys(student); // 객체의 키만 추출하기
+            let index = 0;
+
+            $("#bt").click(function() {
+                if (index < keys.length) {
+                    let key = keys[index];
+                    let value = student[key];
+
+                    // 기존 리스트에 추가
+                    $("#list").append("<li>" + key + ": " + value + "</li>");
+
+                    // 다음 키로 이동
+                    index++;
+                } else {
+                    // 6번째 클릭부터 "데이터 없음" 출력
+                    $("#list").append("<li>데이터 없음</li>");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
