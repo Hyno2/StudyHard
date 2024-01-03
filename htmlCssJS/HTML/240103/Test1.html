@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>테스트 1 </h3>
+    <p id="test"></p>
+    <script>
+        fetch("https://starfall-yuna.github.io/super-duper-computing-machine/json.json")
+        .then(response => {
+            // 보낸 요청에 대해 응답이 잘 도착하였는지 확인
+            if(!response.ok){
+                throw new Error('400 or 500 error')
+            }
+            return response.json(); // json.parse와 유사
+        })
+        .then(data =>{
+            let index =["Name","age","blood","city","Company","Height","Month","Day","Work","Hungry"];
+            let para = document.getElementById("test");
+            
+             // 데이터를 가져와서 출력
+             for (let i = 0; i < 10; i++) {
+                let curIndex = index[i];
+                let curData = data[curIndex];
+                para.innerHTML += `${curIndex}: ${curData}<br>`;
+            }
+        })
+        .catch(error =>{
+            console.log("Error")
+        })
+    </script>
+    
+</body>
+</html>

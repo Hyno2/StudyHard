@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>아래는 로컬 파일을 불러온 결과</h3>
+    <button id="bt">본문 불러오기 </button>
+    <p id="test"></p>
+    <script>
+        //jq Ajax 문법도 js Ajax 문법보다 간결하다
+        // 요청 전송하는 방식 : GET, POST
+        $(function(){
+            $("#bt").click(function(){
+                $("#test").load("test.txt")
+
+            })
+        })
+    </script>
+</body>
+</html>
