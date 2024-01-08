@@ -1,0 +1,87 @@
+JSP의 기본
+<!-- jsp : html 코드 안에서 자바 문법 작성 가능 -->
+.
+<%-- jsp 주석 : 브라우저 페이지 상에서 드렁나지 않음 --%>
+<!--  html 주석 : 브라우저 페이지상에서 드러남 -->
+
+선언부로 쓰는게 좋음 선언부에 안써지는경우에는 선언부에서 초기화시키고 스트립트릿으로 적는
+<%-- <%%> : 스트립트릿 태그 (자바의 대부분 문법 작성O--%>
+<%--<%=%> : 표현 태그 (자바로 선언된 변수/메소드값 반환 --%>
+<%--<%! %> : 선언 태그 (변수 및 메소드 선언, 전역 변수 --%>
+
+	
+<%-- <%@%> : 지시어 태그 --%>
+<%-- <%@ page%> : jsp 파일의 전체적인 속성 정의  --%>
+<%-- <%@ include file ="파일명"%> : 외부 파일을 특정 위치에 포함 --%>
+
+
+<%@ page import="com.javalex.ex.Student" %>
+
+<!-- 액션 태그 -->    
+<!-- usebean : 특정 자바빈의 내용을 가져옴 -->
+<jsp:useBean id="student1" class="com.javalex.ex.Student" scope="page"/>
+<jsp:useBean id="student2" class="com.javalex.ex.Student" scope="page"/>
+
+<!-- setProperty : 특정 필드의 값을 설정 -->
+<jsp:setProperty name="student1" property="name" value="백정윤" />
+<jsp:setProperty name="student1" property="age" value="26" />
+<jsp:setProperty name="student1" property="num" value="101" />
+<jsp:setProperty name="student1" property="gender" value="남성" />
+    
+</head>
+<body>
+	<!-- getProperty : 특정 필드의 값을 반환 -->
+	student1 이름 : <jsp:getProperty name="student1" property="name" /><br>
+	student1 나이 : <jsp:getProperty name="student1" property="age" />세<br>
+
+	<%
+		// page 지시어로, 자바빈 파일을 import 해야 사용 가능
+		Student s1 = new Student("이유나",26,"100","여성");
+		Student s2 = new Student();
+		s2.setName("이종권");
+		s2.setAge(28);
+		s2.setNum("5");
+		s2.setGender("남성");
+	%>
+</body>
+</html>
+
+
+servlet 
+서블릿 : Controller, 대부분의이벤트처리 연산처리 할때 사용
+만들때 java package 를 com.javale.ex
+넥스트 URL mappings 더블클릭 줄인다
+servlet 파일확인은 Java Resources에서 확인 또는 main java 에서확인
+mapping이 있어야함
+
+// Post가 Get보다 보안에 강화되있음
+POST : 데이터를 서버로 제출하여 추가 또는 수정하기 위해서 사용하는 방식
+GET : 어떠한 정보를 가져와서 조회하기 위해서 사용되는 방식
+
+servlet 브라우저상에서 나타나게 하려면 append() 쓰면된다
+append 쓰려면 
+resoponse.setContentType("text/html; charset=UTF-8") 써줘야 append 사용가능
+String name = request.getParameter("name"); 이름 가져온다음
+response.getWriter().append(name);
+
+// 브라우저 상, 객체 멤버변수 값들을 출력
+PrintWriter pw  = response.getWriter();
+
+// 세션을 통해서 생성된 변수 : 
+//		선언된 직후 ~ 사용자가 프로그램을 종료할 때까지 살아있음
+		
+// 1. HttpSession 객체 생성
+	HttpSession session = request.getSession();
+	if(id.equals("admin") && pw.equals("1111")) {
+// 참이면 관리자 로그인 성공
+			
+// 세션에 데이터를 저장 (id_session : "admin")
+	session.setAttribute("id_session", id);
+	
+}
+else {
+// 거짓이면 로그인창으로 복귀
+	System.out.println("관리자 로그인에 실패하였습니다");
+	response.sendRedirect("login.html");
+}
+		
