@@ -1,0 +1,38 @@
+1. 내 깃허브 꾸미기 = 프로필 , 메인홈 
+
+2. 깃 허브 웹호스팅  홈  프로필  프로젝트(메뉴) 만들기
+
+3. 자소서(앞에 좀더늘리고 맨뒤에 입사 후 포부, 이력서 정리하기
+
+4.시간남으면 개인프로젝트 할거 생각하기, 채용공고 보며 뭐 필요한지 알아놓기
+
+CS, 알고리즘 공부
+
+개인프로젝트 
+웹 = spring 사용하고 aws 클라우드 환경 배포경험있으면 좋음
+모바일환경도 같이 하면 좋음
+
+DB쪽은 오픈소스 DB??
+
+채용공고 
+웹 백엔드
+sass 기반
+springmvc?  spring boot?  node.js nest.jss next.js
+jpa, mybatis
+
+캡슐화 docker
+Linux ubuntu unix
+
+DB 
+오픈 소스 DB?
+마리아db, mongodb postgreSQL
+ocp sqlp? 
+
+완료-----------------------------------------------------
+1. C# ppt 새로만들기 
+
+2. 파이썬, 웹 프로젝트 ppt 시연영상 깃허브 주소로 바꾸기
+
+3. c# 프로젝트 readme 활용도구에 mssql 추가하기 
+
+4. C, python, sql, web 모두 readme 광수씨가 만든거 처럼 만들기
