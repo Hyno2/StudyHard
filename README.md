@@ -2,7 +2,6 @@
 
 ### 🛠 Tech Stack
 <img src="https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&#x26;logo=c&logoColor=white"/></a> 
-
 <img src="https://img.shields.io/badge/C%20Sharp-239120?style=for-the-badge&#x26;logo=C%20Sharp&logoColor=white"/></a>
 
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&#x26;logo=python&logoColor=white"/></a> 
@@ -18,8 +17,8 @@
 <img src="https://img.shields.io/badge/visualstudio-5C2D91?style=for-the-badge&#x26;logo=visualstudio&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=for-the-badge&#x26;logo=visualstudiocode&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/eclipseide-2C2255?style=for-the-badge&#x26;logo=eclipseide&logoColor=white"/></a>
-
 <img src="https://img.shields.io/badge/intellijidea-000000?style=for-the-badge&#x26;logo=intellijidea&logoColor=white"/></a>
+
 <img src="https://img.shields.io/badge/pycharm-000000?style=for-the-badge&#x26;logo=pycharm&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/flask-g000000?style=for-the-badge&#x26;logo=flask&logoColor=white"/></a>
 
