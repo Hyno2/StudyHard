@@ -23,6 +23,7 @@
 <img src="https://img.shields.io/badge/pycharm-000000?style=for-the-badge&#x26;logo=pycharm&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/flask-g000000?style=for-the-badge&#x26;logo=flask&logoColor=white"/></a>
 
+<img src="https://img.shields.io/badge/git-000000?style=for-the-badge&#x26;logo=git&logoColor=white"/></a> 
 <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&#x26;logo=bootstrap&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/canva-00C4CC?style=for-the-badge&#x26;logo=canva&logoColor=white"/></a>
 
