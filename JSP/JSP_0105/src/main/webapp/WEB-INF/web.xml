@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>change</display-name>
+    <servlet-name>change</servlet-name>
+    <servlet-class>com.javalex.ex.change</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>change</servlet-name>
+    <url-pattern>/change</url-pattern>
+  </servlet-mapping>
 </web-app>

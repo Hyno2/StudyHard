@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;240111_JSP/src/main/webapp/Changepw.html&apos; to &apos;ChangePw.html&apos;" description="Rename resource &apos;Changepw.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/Changepw.html" name="ChangePw.html" stamp="1704936815711" updateReferences="true"/>
+</session>

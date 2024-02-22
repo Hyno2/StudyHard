@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.javalex.ex.Animal"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.sql.Array"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="com.javalex.ex.UserDAO"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="javax.naming.Context"/>
+    <fullyQualifiedTypeName name="com.javlex.ex.Command.UserService"/>
+    <fullyQualifiedTypeName name="com.javlex.ex.Command.UserServiceInsert"/>
+    <fullyQualifiedTypeName name="com.javlex.ex.Command.UserServiceLogin"/>
+    <fullyQualifiedTypeName name="com.javlex.ex.Command.UserServiceDelete"/>
+    <fullyQualifiedTypeName name="com.javalex.ex.Session.SessionUtil"/>
+</qualifiedTypeNameHistroy>
