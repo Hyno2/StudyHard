@@ -1,0 +1,58 @@
+Spring boot
+사용자 ->@SpringBootApplication->컨트롤러 -> 서비스 -> 리포지토리
+-> 서비스->컨트롤러->사용자 순
+
+@PathVariable("동일매개변수") : 변하는 id값을 얻을때 사용
+
+서비스 필요이유 : 복잡한 코드 모듈화, 엔티티를 DTO객체로 변환가능
+
+폼클래스 : 사용자로부터 입력받는 값을 검증하는곳
+
+페이징 : 입력된 정보,데이터를 여러 페이지로 나눠 표시후 이동할수있게하는것
+
+엔티티 : DB 테이블과 매핑되는 자바 class
+
+thymeleaf문법에 URL은 반드시 @{url}사이에 있어야 하고
+
+자바 객체의 값을 더할 때는@{|객체1,객체2|}이 있어야한다 
+
+url 프리픽스 : 동일한 url매핑을 @RequestMapping("/동일")설정 후 메소드에 줄이기
+
+TODO : 해야할일 을 주석으로 작성해 개발자들이 코드내 해결하지못한문제나 추가작업하는 부
+분 표시
+
+구성 파일
+  templates : 자바코드를 적용할 수 있는 html 자바 객체를 html형태로 출력가능           (thymeleaf)
+
+  static : css,js,jpg,png 저장 하는곳
+
+  applecation.properties: 환경변수들 설정하는곳
+
+  build.gradle : 라이브러리 설치하는곳 항상 refresh해줘
+
+DB
+  orm : 자바문법으로 DB다룰수 있음
+
+ JPA :  orm의 프레임워크이다 인터페이스의 모음 스프링부트에서 표준으로 사용
+
+  hibernate: JPA를 구현한 실제클래스의 대표적인 것
+
+  h2 db : 개발 시 빠르게 만들고 실제 운영시는 더 규모있는 dbms를 사용
+
+테스트 : 로컬서버 끈채로 실행해야함
+  junit: test코드 실행하는 자바 테스트 프레임워크
+
+라이브러리 : 라이브러리 설치후 서버 재시작해야함
+  sbb devtools : 내용 변경시에 서버를 다시실행안해도 바로 적용댐
+
+  Lombok : 자바 클래스에 어노테이션 사용해 @GETTER SETTER 생성자를 자동으로 생성함
+
+  spring dev tools : 서버재시작안해도 자동으로 업데이트해줌
+
+   Spring Boot Validation : 사용자 입력값 검사하는@ 생성,
+			     입력항목 바인딩에도 사용됌
+			  @Valid 다음 BindingResult사용가능
+
+  Thymeleaf : html안에서도 자바문법쓸수있게해줌 
+   	     th: {} 이런식으로사용함  조건, 반복, 텍스트속성값으로 많이 사용된다
+    	     텍스트속성에서는 th:text로도 쓰이지만 [[]] 대괄호두개로묶어서도 사용함
